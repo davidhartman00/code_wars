@@ -19,28 +19,18 @@ list([])
 // returns ''
 */
 
-// Array.prototype.formatThisSting = function () {
-//     formatArr = []
-//     if (this.length > 1){ //handel all arrays great then one
-//         this.forEach(ele => {
-//             formatArr.push(ele.name)
-//         })
-//         str = formatArr.join(", ")
-//         return str.slice(0, str.lastIndexOf(',')) + ' &' + str.slice(str.lastIndexOf(',') + 1)
-//     }
-//     return this.length ? this[0].name : ''
-// }
 
 Array.prototype.formatThisSting = function () {
-    
-    if (this.length > 1) { //handel all arrays great then one
-        str = this.map(ele => { return ele.name }).join(", ")
-        return str.slice(0, str.lastIndexOf(',')) + ' &' + str.slice(str.lastIndexOf(',') + 1)
-    }
-    return this.length ? this[0].name : ''
+
+    return this.length > 1 ? //handel if length more than 1
+        ( str = this.map(ele => { return ele.name }).join(", ") ) //make a string of the names separated with commas
+        .slice(0, str.lastIndexOf(',')) + ' &' + str.slice(str.lastIndexOf(',') + 1) //replace the last comma with a '&'
+        : this.length ? //handel if length is one or less
+            this[0].name : //return just the name as a string
+            '' //return and empty string
 }
 
 function list(names) {
-    //your code here
+
     return names.formatThisSting()
 }
