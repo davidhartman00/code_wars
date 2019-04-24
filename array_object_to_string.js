@@ -19,18 +19,26 @@ list([])
 // returns ''
 */
 
+// Array.prototype.formatThisSting = function () {
+//     formatArr = []
+//     if (this.length > 1){ //handel all arrays great then one
+//         this.forEach(ele => {
+//             formatArr.push(ele.name)
+//         })
+//         str = formatArr.join(", ")
+//         return str.slice(0, str.lastIndexOf(',')) + ' &' + str.slice(str.lastIndexOf(',') + 1)
+//     }
+//     return this.length ? this[0].name : ''
+// }
+
 Array.prototype.formatThisSting = function () {
-    formatArr = []
-    if (this.length > 1){ //handel all arrays great then one
-        this.forEach(ele => {
-            formatArr.push(ele.name)
-        })
-        str = formatArr.join(", ")
+    
+    if (this.length > 1) { //handel all arrays great then one
+        str = this.map(ele => { return ele.name }).join(", ")
         return str.slice(0, str.lastIndexOf(',')) + ' &' + str.slice(str.lastIndexOf(',') + 1)
     }
     return this.length ? this[0].name : ''
 }
-
 
 function list(names) {
     //your code here
