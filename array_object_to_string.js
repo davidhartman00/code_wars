@@ -22,6 +22,7 @@ list([])
 
 Array.prototype.formatThisSting = function () {
 
+    
     return this.length > 1 ? //handel if length more than 1
         ( str = this.map(ele => { return ele.name }).join(", ") ) //make a string of the names separated with commas
         .slice(0, str.lastIndexOf(',')) + ' &' + str.slice(str.lastIndexOf(',') + 1) //replace the last comma with a '&'
