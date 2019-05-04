@@ -38,9 +38,9 @@ function towerBuilder(nFloors) {
     let spc = ' '
     let arr = []
 
-    for (let i = 0; i < nFloors; i++) {
-        let myAst = ast.repeat(i*2 +1)
-        let mySpc = spc.repeat(nFloors - (i +1))
+    for (let i = 1; i <= nFloors; i++) {
+        let myAst = ast.repeat(i*2 -1)
+        let mySpc = spc.repeat(nFloors - i )
         
         arr.push(mySpc + myAst + mySpc)
     }
