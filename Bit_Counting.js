@@ -8,6 +8,6 @@ Example: The binary representation of 1234 is 10011010010, so the function shoul
 
 var countBits = function (n) {
 
-    return Number(n).toString(2).
+    return Number(n).toString(2).split("0").join('').length;
 
 };
