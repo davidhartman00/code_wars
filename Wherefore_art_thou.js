@@ -11,3 +11,11 @@ and the second argument is { last: "Capulet" }, then you must return the
 third object from the array (the first argument), because it contains the 
 name and its value, that was passed on as the second argument.
 */
+
+const whatIsInAName = (coll, source) => {
+    return coll.filter(el => {
+        return Object.keys(source).every(prop =>
+            el.hasOwnproperty(prop) ? el[prop] === source[prop] : false
+        )
+    })
+}
