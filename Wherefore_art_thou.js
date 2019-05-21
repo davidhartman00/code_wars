@@ -15,7 +15,7 @@ name and its value, that was passed on as the second argument.
 const whatIsInAName = (coll, source) => {
     return coll.filter(el => {
         return Object.keys(source).every(prop =>
-            el.hasOwnproperty(prop) ? el[prop] === source[prop] : false
+            el.hasOwnProperty(prop) ? el[prop] === source[prop] : false
         )
     })
 }
