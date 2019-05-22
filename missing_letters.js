@@ -14,3 +14,16 @@ fearNotLetter("bcdf") should return "e".
   
 fearNotLetter("abcdefghijklmnopqrstuvwxyz") should return undefined.
 */
+
+function fearNotLetter(str) {
+    let alpha = "abcdefghijklmnopqrstuvwkyz"
+    let arr = (alpha).split('')
+    return alpha.includes(str) ?
+        undefined :
+        arr.filter(
+            (a, b, c) => (c.indexOf(a) >= arr.indexOf(str[0])) ?
+                (str.split("").indexOf(a) === -1) :
+                false
+        ).join("")[0]
+}
+fearNotLetter("abce");
