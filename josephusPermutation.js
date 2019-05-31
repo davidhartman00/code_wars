@@ -24,3 +24,17 @@ So our final result is:
 
 josephus([1,2,3,4,5,6,7],3)==[3,6,2,7,5,1,4]
 For more info, browse the Josephus Permutation page on wikipedia;  */
+
+// 
+
+const josephus = (items, k) => {
+  let t = k  
+  let final = [];
+  for (item in items) {
+    final.push(items.splice(k-1, 1));
+    k = items.length > k+k ? k : k
+  }
+
+  return items
+};
+console.log(josephus([1, 2, 3, 4, 5, 6, 7], 3));
