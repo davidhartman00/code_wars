@@ -12,6 +12,5 @@ setAlarm(false, false) -> false
 setAlarm(true, false) -> true
 */
 
-const setAlarm = (employed, vacation) =>
-  vacation ? false : employed ? true : false;
+const setAlarm = (employed, vacation) =>  vacation ? false : employed ? true : false;
 
