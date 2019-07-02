@@ -16,4 +16,4 @@ example:
 Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 */
 
-const isPowerOfTwo = (n) =>  n == 2 ? true : n == 0 ? false :  Number.isInteger(Math.log2())
+const isPowerOfTwo = (n) =>  n == 2 ? true : n == 0 ? false :  Number.isInteger(Math.log2(n))
