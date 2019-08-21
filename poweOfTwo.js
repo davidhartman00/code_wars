@@ -16,4 +16,6 @@ example:
 Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 */
 
-const isPowerOfTwo = (n) =>  Number.isInteger(Math.log2(n))
+const isPowerOfTwo = (n) =>  Number.isInteger(Math.log2(n)) 
+//using the Math method to determin the square root of n.
+// then use the Number method to determin the result is a interger
