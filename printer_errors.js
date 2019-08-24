@@ -20,8 +20,8 @@ error_printer(s) => "8/22"
 */
 
 function printerError(s) {
-  let reX = /[a-m]/g; //needed regex
-  let sErrorLength = s.replace(reX, "").length; //error rate
+  let regX = /[a-m]/g; //needed regex
+  let sErrorLength = s.replace(regX, "").length; //error rate
 
   return `${sErrorLength}/${s.length}`; //output
 }
