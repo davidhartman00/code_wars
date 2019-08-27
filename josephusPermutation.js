@@ -28,7 +28,6 @@ For more info, browse the Josephus Permutation page on wikipedia;  */
 // https://www.codewars.com/kata/josephus-permutation/train/javascript
 
 const josephus = (items, k) => {
-  let t = k  
   let final = [];
   for (item in items) {
     final.push(items.splice(k-1, 1));
