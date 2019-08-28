@@ -22,6 +22,7 @@ function fearNotLetter(str) {
         undefined :
         arr.filter(
             (a, b, c) => (c.indexOf(a) >= arr.indexOf(str[0])) ?
+            // var b is a needed placeholder
                 (str.split("").indexOf(a) === -1) :
                 false
         ).join("")[0]
